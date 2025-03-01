@@ -1,9 +1,4 @@
 /* Everforest (based on Catppuccin's) userContent.css */
-/* How to use:
-1. Set toolkit.legacyUserProfileCustomizations.stylesheets to true in about:config
-2. Create chrome folder in your profile folder (about:profiles)
-3. Paste this file
-4. Restart Firefox */
 
 @media (prefers-color-scheme: dark) {
   /* about: pages */
