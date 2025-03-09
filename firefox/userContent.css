@@ -64,6 +64,10 @@
       --newtab-primary-action-background: #a7c080 !important;
     }
 
+    .toggle-button[aria-pressed="true"] {
+      background-color: #a7c080 !important;
+    }
+
     .icon {
       color: #a7c080 !important;
     }
@@ -87,7 +91,7 @@
       background-color: #374145 !important;
     }
 
-    #formAutofillGroupBox {
+    #formAutofillGroupBox, #browsingProtectionGroup {
       display: none !important;
     }
   }
