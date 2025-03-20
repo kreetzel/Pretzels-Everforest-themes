@@ -7,6 +7,7 @@
       --color-accent-primary: #a7c080 !important;
       --color-accent-primary-hover: #a7c080 !important;
       --color-accent-primary-active: #a7c080 !important;
+      --primary-color: #a7c080 !important;
 
       --link-color: #a7c080 !important;
       --link-color-hover: #83c092 !important;
@@ -28,6 +29,10 @@
       --in-content-table-background: #374145 !important;
       --table-row-background-color: #374145 !important;
       --table-row-background-color-alternate: #2e383c !important;
+    }
+
+    body {
+      font-family: Noto Sans !important;
     }
 
     td {
@@ -151,6 +156,30 @@
 
     delete-button {
       margin-left: 10px !important;
+    }
+  }
+
+  /* reader view */
+  @-moz-document url-prefix("about:reader") {
+    body {
+      --custom-theme-foreground: #d3c6aa !important;
+      --custom-theme-background: #272e33 !important;
+      --custom-theme-unvisited-links: #7fbbb3 !important;
+      --custom-theme-visited-links: #7291a7 !important;
+      --primary-color: #a7c080 !important;
+      --popup-foreground: #d3c6aa !important;
+      --popup-background: #374145 !important;
+      --popup-button-foreground: #d3c6aa !important;
+      --popup-button-foreground-hover: #d3c6aa !important;
+      --popup-button-selected-foreground: #2e383c !Important;
+      --popup-button-background: #414b50 !important;
+      --popup-button-background-hover: #495156 !important;
+      --popup-line: #414b50 !important;
+      --toolbar-border: #2e383c !important;
+    }
+
+    .color-input-container {
+      background: var(--popup-button-background) !important;
     }
   }
 }
