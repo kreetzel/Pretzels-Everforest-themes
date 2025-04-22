@@ -1,0 +1,41 @@
+:root {
+  --color-accent-primary: #a7c080 !important;
+  --color-accent-primary-hover: #a7c080 !important;
+  --color-accent-primary-active: #a7c080 !important;
+  --primary-color: #a7c080 !important;
+
+  --link-color: #a7c080 !important;
+  --link-color-hover: #83c092 !important;
+  --in-content-text-color: #d3c6aa !important;
+  --in-content-item-selected-text: #d3c6aa !important;
+  --in-content-page-color: #d3c6aa !important;
+  --in-content-page-background: #272e33 !important;
+  background-color: #272e33 !important;
+  --background-color-box: #374145 !important;
+  --in-content-box-border-color: #414b50 !important;
+  --in-content-primary-button-text-color: var(--in-content-page-background) !important;
+  --in-content-primary-button-background: #414b50 !important;
+  --in-content-item-hover: #495156 !important;
+  --card-outline-color: #414b50 !important;
+
+  --in-content-table-header-color: #a7c080 !important;
+  --in-content-table-header-background: #414b50 !important;
+  --in-content-table-border-color: #566066 !important;
+  --in-content-table-background: #374145 !important;
+  --table-row-background-color: #374145 !important;
+  --table-row-background-color-alternate: #2e383c !important;
+}
+
+#tabbrowser-tabbox {
+  box-shadow: none !important;
+}
+
+#SanitizeDialog {
+  color: #d3c6aa !important;
+  background-color: var(--background-color-box) !important;
+}
+
+#sanitizeEverythingWarningBox {
+  color: #d3c6aa !important;
+  background-color: var(--in-content-box-border-color) !important;
+}
