@@ -31,11 +31,9 @@
 }
 
 #SanitizeDialog {
-  color: #d3c6aa !important;
   background-color: var(--background-color-box) !important;
 }
 
 #sanitizeEverythingWarningBox {
-  color: #d3c6aa !important;
   background-color: var(--in-content-box-border-color) !important;
 }
