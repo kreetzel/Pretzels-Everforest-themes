@@ -1,186 +1,111 @@
 /* Everforest (based on Catppuccin's) userContent.css */
+@-moz-document url-prefix("about:") {
+  :root {
+    --color-accent-primary: #a7c080 !important;
+    --color-accent-primary-hover: #83c092 !important;
+    --color-accent-primary-active: #a7c080 !important;
+    --primary-color: #a7c080 !important;
 
-@media (prefers-color-scheme: dark) {
-  /* about: pages */
-  @-moz-document url-prefix("about:") {
-    :root {
-      --color-accent-primary: #a7c080 !important;
-      --color-accent-primary-hover: #a7c080 !important;
-      --color-accent-primary-active: #a7c080 !important;
-      --primary-color: #a7c080 !important;
+    --link-color: #a7c080 !important;
+    --link-color-hover: #83c092 !important;
+    --in-content-text-color: #d3c6aa !important;
+    --in-content-item-selected-text: #d3c6aa !important;
+    --in-content-page-color: #d3c6aa !important;
+    --in-content-page-background: #272e33 !important;
+    background-color: #272e33 !important;
+    --background-color-box: #374145 !important;
+    --in-content-box-border-color: #414b50 !important;
+    --in-content-primary-button-text-color: #d3c6aa !important;
+    --in-content-primary-button-background: #414b50 !important;
+    --in-content-item-hover: #495156 !important;
+    --in-content-button-background: #374145 !important;
+    --in-content-button-background-hover: color-mix(in srgb, #d0edff 15%, transparent) !important;
+    --card-outline-color: #414b50 !important;
 
-      --link-color: #a7c080 !important;
-      --link-color-hover: #83c092 !important;
-      --in-content-text-color: #d3c6aa !important;
-      --in-content-item-selected-text: #d3c6aa !important;
-      --in-content-page-color: #d3c6aa !important;
-      --in-content-page-background: #272e33 !important;
-      background-color: #272e33 !important;
-      --background-color-box: #374145 !important;
-      --in-content-box-border-color: #414b50 !important;
-      --in-content-primary-button-text-color: var(--in-content-page-background) !important;
-      --in-content-primary-button-background: #414b50 !important;
-      --in-content-item-hover: #495156 !important;
-      --card-outline-color: #414b50 !important;
+    --in-content-table-header-color: #a7c080 !important;
+    --in-content-table-header-background: #414b50 !important;
+    --in-content-table-border-color: #566066 !important;
+    --in-content-table-background: #374145 !important;
+    --table-row-background-color: #374145 !important;
+    --table-row-background-color-alternate: #2e383c !important;
 
-      --in-content-table-header-color: #a7c080 !important;
-      --in-content-table-header-background: #414b50 !important;
-      --in-content-table-border-color: #566066 !important;
-      --in-content-table-background: #374145 !important;
-      --table-row-background-color: #374145 !important;
-      --table-row-background-color-alternate: #2e383c !important;
-    }
-
-    body {
-      font-family: Noto Sans !important;
-    }
-
-    td {
-      border-color: var(--in-content-table-border-color) !important;
-    }
-
-    treecol {
-      background-color: var(--in-content-table-header-background) !important;
-    }
-
-    groupbox {
-      background-color: #2e383c !important;
-      padding: 15px !important;
-      border-radius: 4px !important;
-    }
-
-    menulist, button {
-      background-color: var( --in-content-primary-button-background) !important;
-    }
-
-    .dialogBox, dialog {
-      background-color: #374145 !important;
-    }
+    font-family: Noto Sans !important;
   }
 
-  /* about:newtab & about:home */
-  @-moz-document url("about:newtab"), url("about:home") {
-    :root {
-      --newtab-background-color: #272e33 !important;
-      --newtab-background-color-secondary: #414b50 !important;
-      --newtab-element-hover-color: #2e383c !important;
-      --newtab-text-primary-color: #d3c6aa !important;
-      --newtab-wordmark-color: #d3c6aa !important;
-      --newtab-primary-action-background: #a7c080 !important;
-    }
+  .dialogBox, dialog {
+    background-color: #374145 !important;
+  }
+}
 
-    .toggle-button[aria-pressed="true"] {
-      background-color: #a7c080 !important;
-    }
+/* about:newtab & about:home */
+@-moz-document url("about:newtab"), url("about:home") {
+  :root {
+    --newtab-background-color: #272e33 !important;
+    --newtab-background-color-secondary: #374145 !important;
+    --newtab-element-hover-color: #2e383c !important;
+    --newtab-element-secondary-color: #414b50 !important;
+    --newtab-element-secondary-hover-color: var(--in-content-button-background-hover) !important;
+    --newtab-text-primary-color: #d3c6aa !important;
+    --newtab-wordmark-color: #d3c6aa !important;
+    --newtab-primary-action-background: #a7c080 !important;
+  }
+}
 
-    .icon {
-      color: #a7c080 !important;
-    }
+/* about:logins */
+@-moz-document url-prefix("about:logins") {
+  .list-item.selected {
+    background-color: #2e383c !important;
+  }
+}
 
-    .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
-      color: #a7c080 !important;
-    }
+/* about:protections */
+@-moz-document url-prefix("about:protections") {
+  :root {
+    --social-color: #83c092 !important;
+    --cookie-color: #7fbbb3 !important;
+    --fingerprinter-color: #dbbc7f !important;
+    --cryptominer-color: #e67e80 !important;
+    --tracker-color: #a7c080 !important;
+  }
+}
 
-    .top-site-outer .search-topsite {
-      background-color: #7fbbb3 !important;
-    }
+/* about:support */
+@-moz-document url-prefix("about:support") {
+  :root {
+    --codec-bg-header: var(--in-content-table-header-background) !important;
+    --codec-text-supported: #374145 !important;
+    --codec-text-unsupported: var(--codec-text-supported) !important;
+    --codec-bg-supported-odd: #a7c080 !important;
+    --codec-bg-supported-even: color-mix(in srgb, var(--codec-bg-supported-odd) 80%, var(--color-white) 20%) !important;
+    --codec-bg-unsupported-odd: #e67e80 !important;
+    --codec-bg-unsupported-even: color-mix(in srgb, var(--codec-bg-unsupported-odd) 80%, var(--color-white) 20%) !important;
+  }
+}
 
-    .compact-cards .card-outer .card-context .card-context-icon.icon-download {
-      fill: #a7c080 !important;
-    }
+/* reader view */
+@-moz-document url-prefix("about:reader") {
+  body {
+    --custom-theme-foreground: #d3c6aa !important;
+    --custom-theme-background: #272e33 !important;
+    --custom-theme-unvisited-links: #7fbbb3 !important;
+    --custom-theme-visited-links: #7291a7 !important;
+    --primary-color: #a7c080 !important;
+    --popup-foreground: #d3c6aa !important;
+    --popup-background: #374145 !important;
+    --popup-button-foreground: #d3c6aa !important;
+    --popup-button-foreground-hover: #d3c6aa !important;
+    --popup-button-selected-foreground: #2e383c !Important;
+    --popup-button-background: #414b50 !important;
+    --popup-button-background-hover: #495156 !important;
+    --popup-line: #414b50 !important;
+    --toolbar-button-background-hover: var(--in-content-button-background-hover) !important;
+    --toolbar-button-background-active: color-mix(in srgb, #d0edff 20%, transparent) !important;
+    --toolbar-border: #2e383c !important;
+    --tooltip-foreground: #d3c6aa !important;
   }
 
-  /* about:preferences */
-  @-moz-document url-prefix("about:preferences") {
-    .web-appearance-choice-image-container {
-      background-color: #374145 !important;
-    }
-
-    #formAutofillGroupBox, #browsingProtectionGroup {
-      display: none !important;
-    }
-  }
-
-  /* about:addons */
-  @-moz-document url-prefix("about:addons") {
-    button {
-      background-color: transparent !important;
-    }
-
-    .more-options-button, .back-button {
-      background-color: #374145 !important;
-    }
-
-    .toggle-button {
-      background-color: var(--toggle-background-color) !important;
-    }
-
-    .toggle-button[aria-pressed="true"] {
-      background-color: var(--toggle-background-color-pressed) !important;
-    }
-  }
-
-  /* about:protections */
-  @-moz-document url-prefix("about:protections") {
-    :root {
-      --social-color: #83c092 !important;
-      --cookie-color: #7fbbb3 !important;
-      --fingerprinter-color: #dbbc7f !important;
-      --cryptominer-color: #e67e80 !important;
-      --tracker-color: #a7c080 !important;
-    }
-  }
-
-  /* about:support */
-  @-moz-document url-prefix("about:support") {
-    :root {
-      --codec-bg-header: var(--in-content-table-header-background) !important;
-      --codec-text-supported: #374145 !important;
-      --codec-text-unsupported: var(--codec-text-supported) !important;
-      --codec-bg-supported-odd: #a7c080 !important;
-      --codec-bg-supported-even: color-mix(in srgb, var(--codec-bg-supported-odd) 80%, var(--color-white) 20%) !important;
-      --codec-bg-unsupported-odd: #e67e80 !important;
-      --codec-bg-unsupported-even: color-mix(in srgb, var(--codec-bg-unsupported-odd) 80%, var(--color-white) 20%) !important;
-    }
-  }
-
-  /* about:logins */
-  @-moz-document url-prefix("about:logins") {
-    .icon-button {
-      background-color: #414b50 !important;
-    }
-
-    .list-item.selected {
-      background-color: #2e383c !important;
-    }
-
-    delete-button {
-      margin-left: 10px !important;
-    }
-  }
-
-  /* reader view */
-  @-moz-document url-prefix("about:reader") {
-    body {
-      --custom-theme-foreground: #d3c6aa !important;
-      --custom-theme-background: #272e33 !important;
-      --custom-theme-unvisited-links: #7fbbb3 !important;
-      --custom-theme-visited-links: #7291a7 !important;
-      --primary-color: #a7c080 !important;
-      --popup-foreground: #d3c6aa !important;
-      --popup-background: #374145 !important;
-      --popup-button-foreground: #d3c6aa !important;
-      --popup-button-foreground-hover: #d3c6aa !important;
-      --popup-button-selected-foreground: #2e383c !important;
-      --popup-button-background: #414b50 !important;
-      --popup-button-background-hover: #495156 !important;
-      --popup-line: #414b50 !important;
-      --toolbar-border: #2e383c !important;
-    }
-
-    .color-input-container {
-      background: var(--popup-button-background) !important;
-    }
+  .color-input-container {
+    background: var(--popup-button-background) !important;
   }
 }
 
@@ -188,22 +113,35 @@
 @-moz-document url-prefix("chrome://browser/content/") {
   :root {
     --color-accent-primary: #a7c080 !important;
-    --color-accent-primary-hover: #a7c080 !important;
+    --color-accent-primary-hover: #83c092 !important;
     --color-accent-primary-active: #a7c080 !important;
+    --primary-color: #a7c080 !important;
 
+    --link-color: #a7c080 !important;
+    --link-color-hover: #83c092 !important;
+    --in-content-text-color: #d3c6aa !important;
+    --in-content-item-selected-text: #d3c6aa !important;
     --in-content-page-color: #d3c6aa !important;
-    --in-content-page-background: #374145 !important;
-    --in-content-primary-button-text-color: #2e383c !important;
-    --in-content-primary-button-background: #a7c080 !important;
-    --in-content-button-background: #414b50 !important;
-    --background-color-box: #2e383c !important;
+    --in-content-page-background: #272e33 !important;
+    background-color: #272e33 !important;
+    --background-color-box: #374145 !important;
+    --in-content-box-border-color: #414b50 !important;
+    --in-content-primary-button-text-color: #d3c6aa !important;
+    --in-content-primary-button-background: #414b50 !important;
+    --in-content-item-hover: #495156 !important;
+    --in-content-button-background: #374145 !important;
+    --in-content-button-background-hover: color-mix(in srgb, #d0edff 15%, transparent) !important;
+    --card-outline-color: #414b50 !important;
+
+    --in-content-table-header-color: #a7c080 !important;
+    --in-content-table-header-background: #414b50 !important;
+    --in-content-table-border-color: #566066 !important;
+    --in-content-table-background: #374145 !important;
+    --table-row-background-color: #374145 !important;
+    --table-row-background-color-alternate: #2e383c !important;
   }
 
   dialog, :root[dialogroot]{
     --in-content-page-background: #374145 !important;
-  }
-
-  input, textarea, treechildren, richlistbox, menuitem {
-    background-color: #2e383c !important;
   }
 }

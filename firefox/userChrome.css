@@ -1,6 +1,7 @@
+/* Everforest userChrome.css */
 :root {
   --color-accent-primary: #a7c080 !important;
-  --color-accent-primary-hover: #a7c080 !important;
+  --color-accent-primary-hover: #83c092 !important;
   --color-accent-primary-active: #a7c080 !important;
   --primary-color: #a7c080 !important;
 
@@ -13,9 +14,11 @@
   background-color: #272e33 !important;
   --background-color-box: #374145 !important;
   --in-content-box-border-color: #414b50 !important;
-  --in-content-primary-button-text-color: var(--in-content-page-background) !important;
+  --in-content-primary-button-text-color: #d3c6aa !important;
   --in-content-primary-button-background: #414b50 !important;
   --in-content-item-hover: #495156 !important;
+  --in-content-button-background: #374145 !important;
+  --in-content-button-background-hover: color-mix(in srgb, #d0edff 15%, transparent) !important;
   --card-outline-color: #414b50 !important;
 
   --in-content-table-header-color: #a7c080 !important;
@@ -24,16 +27,11 @@
   --in-content-table-background: #374145 !important;
   --table-row-background-color: #374145 !important;
   --table-row-background-color-alternate: #2e383c !important;
+
+  font-family: Noto Sans !important;
 }
+
 
 #tabbrowser-tabbox {
   box-shadow: none !important;
-}
-
-#SanitizeDialog {
-  background-color: var(--background-color-box) !important;
-}
-
-#sanitizeEverythingWarningBox {
-  background-color: var(--in-content-box-border-color) !important;
 }
